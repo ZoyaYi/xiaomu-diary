@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#fff9ef"><title>小μ · 成长手记</title><style>:root{--bg:#fffaf2;--paper:#fffefb;--ink:#543a29;--muted:#9b8875;--line:#efe2cf;--accent:#77a9d0;--accent-dark:#3d78a4;--wash:#eaf3fb;--gold:#d0a16c;--brown:#946640}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-rounded,'SF Pro Rounded','PingFang SC','Microsoft YaHei',sans-serif;font-size:14px}button,input,select,textarea{font:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button{cursor:pointer;border:0;background:none;color:inherit}a{color:inherit;text-decoration:none}button:disabled{cursor:default;opacity:.45}button:focus-visible,a:focus-visible{outline:3px solid #8fbee2;outline-offset:4px}svg{width:24px;height:24px;vertical-align:middle}.sidebar{position:fixed;width:228px;inset:0 auto 0 0;background:#f5e8d3;border-right:1px solid #eddbc0;padding:35px 22px;display:flex;flex-direction:column}.brand{display:flex;gap:11px;align-items:center;font-size:16px;font-weight:650}.brand-avatar{height:48px;width:48px;border-radius:18px;object-fit:cover;object-position:55% 48%;border:3px solid #fffbf2;transform:rotate(-6deg)}.brand small{display:block;font-size:8px;letter-spacing:1px;color:#a2825c;margin-top:7px}nav{margin-top:54px;display:grid;gap:13px}nav a{display:flex;align-items:center;gap:13px;padding:14px 18px;border-radius:17px;color:#a1815e;transition:background .2s,transform .2s}nav a:hover{background:#ecdbbf;transform:translateX(2px)}nav a.active{background:#fffcf5;color:#754c2e;box-shadow:0 4px 0 #e7d4b7;font-weight:650}.nav-icon{display:flex}.nav-icon svg{width:22px;height:22px}.sidebar-bottom{margin-top:auto;color:#a1815e;font-size:11px;display:flex;gap:7px;align-items:center;flex-wrap:wrap}.sidebar-bottom button{width:100%;text-align:left;padding:10px 0}.dot{width:6px;height:6px;background:#8fb8d7;border-radius:50%}main{margin-left:228px;padding:0 45px 45px;max-width:1430px}header{height:83px;border-bottom:1px dashed #e9dbc6;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted)}.breadcrumb{display:flex;align-items:center;gap:14px}.breadcrumb b{font-weight:500;color:#795839}#today{font-variant-numeric:tabular-nums}#content{animation:page-in .3s ease}.heading{display:flex;justify-content:space-between;align-items:center;margin:34px 0 28px}.eyebrow{font-size:12px;color:#ae9172;letter-spacing:1px;margin:0 0 10px}h1{font-size:31px;letter-spacing:1px;font-weight:700;margin:0}h2{font-size:18px;font-weight:650;margin:0;letter-spacing:.3px}h3{font-size:14px;font-weight:600;margin:0}p{line-height:1.8}.muted{color:var(--muted)}.small{font-size:11px}.primary{background:var(--accent);color:white;min-height:44px;padding:12px 19px;border-radius:14px;box-shadow:0 3px 0 #6193b8;font-size:12px;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;transition:transform .15s}.primary:hover{transform:translateY(-2px);background:#6a9fc8}.primary:active{transform:translateY(2px);box-shadow:none}.secondary{border:1px solid #dcc4a4;background:#fffaf1;border-radius:12px;padding:10px 16px;min-height:42px;font-size:12px}.secondary:hover{background:#f7e9d4}.text-button{font-size:11px;color:var(--accent-dark);padding:5px 0}.blue-label{display:inline-flex;align-items:center;gap:4px;background:#e7f0f9;color:#6a99be;font-size:10px;border-radius:20px;padding:7px 12px;letter-spacing:.4px}.blue-label svg{width:14px;height:14px;transform:rotate(15deg)}.blue-text{color:var(--accent)}.mu-hero{position:relative;isolation:isolate;margin-top:30px;background:#f4e2c7;border:1px solid #f0dbbb;border-radius:28px;min-height:255px;padding:34px 38px;display:flex;align-items:center;justify-content:space-between;overflow:hidden}.hero-copy{position:relative;z-index:2}.hero-copy h1{font-size:52px;letter-spacing:1px;margin-top:15px;line-height:1.25}.hero-copy h1>span{display:block;font-size:25px;margin-top:4px;font-weight:600}.hero-copy>p{font-size:12px;color:#a07a51;margin:12px 0}.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin:17px 0 12px}.hero-tags span{font-size:10px;background:#fff8eadb;border-radius:9px;padding:7px 9px;color:#9b744b}.hero-spots{position:absolute;inset:0;z-index:0;opacity:.09;background:radial-gradient(ellipse 16px 11px at 27% 20%,transparent 42%,#784b27 45%,#784b27 70%,transparent 74%),radial-gradient(ellipse 11px 17px at 76% 65%,transparent 42%,#784b27 45%,#784b27 70%,transparent 74%),radial-gradient(ellipse 14px 10px at 15% 82%,transparent 42%,#784b27 45%,#784b27 70%,transparent 74%);background-size:126px 115px,153px 134px,167px 146px;mask-image:linear-gradient(90deg,transparent 10%,black)}.portrait{width:240px;height:235px;flex-shrink:0;position:relative;transform:rotate(5deg);padding:9px 9px 32px;border-radius:100px 100px 24px 24px;background:#fffdf8;box-shadow:3px 5px 0 #d4b38950;margin:0 20px 0 30px;transition:transform .3s}.portrait:hover{transform:rotate(1deg) scale(1.03)}.portrait img{width:100%;height:100%;object-fit:cover;object-position:56% 47%;border-radius:95px 95px 16px 16px}.photo-caption{position:absolute;bottom:9px;left:0;right:0;text-align:center;font-family:'Comic Sans MS',cursive;font-size:12px;color:#9b7550}.photo-tape{position:absolute;background:#9fc6e0c9;width:61px;height:21px;left:calc(50% - 30px);top:-4px;transform:rotate(-12deg);clip-path:polygon(4% 0,96% 0,100% 25%,96% 60%,100% 100%,0 100%,4% 70%,0 30%)}.hero-paw{position:absolute;bottom:24px;right:10px;transform:rotate(20deg);color:#bb966457}.hero-paw svg{width:42px;height:42px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin:24px 0 28px}.stat{display:block;text-align:left;background:#fffefb;border:1px solid #efdfc7;border-radius:20px;padding:21px 22px;box-shadow:0 3px 0 #eee2ce44;transition:transform .2s}.stat:hover{transform:translateY(-3px)}.stat:nth-child(2){background:#edf5fc;border-color:#d6e6f3}.stat-label{font-size:11px;color:#a38a6b;display:flex;align-items:center;gap:6px}.stat-label svg{width:17px;height:17px}.stat:nth-child(2) .stat-label{color:#7e9db4}.stat-value{font-size:33px;font-weight:650;display:block;letter-spacing:.4px;margin:12px 0 7px;line-height:1.2}.stat-value small{font-size:11px;font-weight:400;color:var(--muted);margin-left:5px}.stat-foot{display:block;color:#b69a7e;font-size:10px}.section-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:17px}.section-top .chart-note{margin:7px 0 0}.section-top h2>span{color:#9dbdd3}.quick-section{margin:27px 0 30px}.quick{display:flex;gap:12px;flex-wrap:wrap}.quick button{flex:1;min-width:65px;font-size:11px;text-align:center;padding:12px 8px 10px;border:1px dashed #e5cfaf;border-radius:17px;background:#fff8eb;color:#957049;transition:transform .2s}.quick button:hover{transform:translateY(-3px);background:#f8eddc}.quick button>span{display:block;width:30px;height:30px;margin:0 auto 7px;color:#a08055}.quick button:nth-child(even){background:#edf5fc;border-color:#c3daed;color:#7299b7}.quick button:nth-child(even)>span{color:#7299b7}.quick.inline button{flex:none;padding:11px 17px;border-style:solid}.content-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:22px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:23px;padding:25px;margin-bottom:23px;min-width:0}.chart-panel{min-height:295px}.chart{width:100%;height:195px;display:block;overflow:visible}.chart text{font-family:inherit;font-size:10px;fill:#b9a58e}.chart-note{font-size:11px;color:#b39a80;line-height:1.9}.growth-note{font-size:11px;text-align:center;background:#fff4df;border-radius:12px;color:#ae8555;padding:9px;margin:0}.care-row{display:flex;align-items:center;gap:12px;padding:16px 0;border-bottom:1px dashed var(--line)}.care-row:last-of-type{border-bottom:0}.mini-badge{width:34px;height:34px;display:grid;place-items:center;flex-shrink:0;background:#f8ecd6;border-radius:11px;color:#a47e50;font-size:13px}.mini-badge.blue{background:#e9f2fa;color:#85a8c4}.care-row strong{font-size:12px;font-weight:500}.care-row p{font-size:11px;margin:4px 0 0;color:#b69c80}.care-status{font-size:10px;color:#c1aa8f;margin-left:auto}.outing-banner{display:flex;align-items:center;gap:18px;background:#eaf3fb;border:1px dashed #c8dfef;border-radius:21px;padding:23px 27px;margin:0 0 30px}.outing-banner h2{font-size:17px;color:#668daa}.outing-banner p{font-size:11px;color:#97b0c2;margin:7px 0 0}.outing-paw{color:#93bbd7;transform:rotate(-13deg)}.outing-paw svg{width:43px;height:43px}.outing-banner>.primary{margin-left:auto}.photo-section{margin:28px 0 35px}.photo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.moment{padding:8px 8px 13px;background:white;border:1px solid #ecdfc9;border-radius:15px;transform:rotate(-2deg);transition:transform .25s;box-shadow:0 4px 0 #ecdfc62f}.moment:nth-child(2){transform:rotate(2deg)}.moment:nth-child(3){transform:rotate(-1deg)}.moment:hover{transform:rotate(0) translateY(-4px)}.moment img{width:100%;height:180px;object-fit:cover;border-radius:10px;display:block}.moment:first-child img{object-position:48% 43%}.moment:nth-child(3) img{object-position:50% 60%}.moment span{display:block;padding-top:11px;font-size:11px;color:#ad8f70}.records-section{margin-top:25px}.records{display:grid}.record{display:grid;grid-template-columns:40px minmax(0,1fr) 55px 10px;align-items:center;gap:14px;width:100%;text-align:left;padding:17px 2px;border-bottom:1px dashed #eddfc9;border-radius:0}.record:hover{background:#f8efdf}.record-icon{width:39px;height:39px;display:grid;place-items:center;border-radius:13px;background:#f8edd8;color:#b08b58}.record-icon svg{width:21px;height:21px}.record-icon.outing,.record-icon.meal{background:#e8f2fb;color:#7babc9}.record-title{font-size:12px;font-weight:500;margin-bottom:6px}.record-detail{font-size:11px;color:#b39b80;line-height:1.6;overflow-wrap:anywhere}.record-date{font-size:10px;color:#bba88d;text-align:right;line-height:1.8}.row-arrow{color:#c7b397;font-size:21px}.empty{padding:27px 0;color:#b19a7d;font-size:12px;line-height:1.9}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.filters button{border:1px solid #ead7b8;border-radius:20px;padding:8px 14px;font-size:12px;color:#a48968}.filters button.active{background:#986e43;color:#fff8ef;border-color:#986e43}.footer-note{font-size:10px;color:#c2b195;text-align:center;line-height:1.9;margin-top:32px}.footer-note svg{display:block;width:24px;height:24px;color:#cdb796;margin:0 auto 8px;transform:rotate(-12deg)}.food-stats{display:flex;gap:45px;margin:22px 0}.food-stats p{font-size:11px;color:#b69b7c;margin:0 0 8px}.food-stats strong{font-size:34px;font-weight:600}.note{background:#fff4e1;color:#ac885e;border-radius:13px;padding:15px;font-size:11px;line-height:1.9}.feeder>.muted{font-size:12px}.settings-row{display:flex;align-items:center;justify-content:space-between;gap:17px;padding:22px 0;border-bottom:1px dashed var(--line)}.settings-row:last-child{border-bottom:0;padding-bottom:0}.settings-row p{font-size:11px;margin:6px 0 0;color:#af967a}.type-toggles{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:24px}.type-toggle{display:flex;align-items:center;justify-content:space-between;padding:14px;border:1px solid #eddfca;border-radius:13px;color:#b49b7d;font-size:12px}.type-toggle span{display:flex;align-items:center;gap:10px}.type-toggle svg{height:20px;width:20px}.type-toggle i{display:block;height:20px;width:35px;border-radius:20px;background:#e9dfce;padding:3px;flex-shrink:0}.type-toggle i:before{content:'';display:block;width:14px;height:14px;background:white;border-radius:50%;transition:transform .2s}.type-toggle.on i{background:#8db8d8}.type-toggle.on i:before{transform:translateX(15px)}.type-toggle.on{color:#8c704f}.profile-card{display:flex;gap:20px;align-items:center}.profile-card>img{width:86px;height:86px;object-fit:cover;border:5px solid #f5e4c9;border-radius:28px;transform:rotate(-6deg)}.profile-card h2{font-size:24px}.profile-card p{font-size:12px;color:#b1977c;margin:7px 0}.profile-card>button{margin-left:auto;white-space:nowrap}.outing-intro{display:flex;align-items:center;gap:25px;margin:0 0 25px;background:#ecf4fb;border-radius:23px;padding:18px}.outing-intro>img{width:125px;height:125px;object-fit:cover;object-position:50% 40%;border-radius:19px;transform:rotate(-3deg)}.outing-intro h2{font-size:21px;margin-top:13px}.outing-intro p{font-size:12px;color:#93aac0}.cal-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.cal-title button{font-size:25px;width:37px;height:37px;border-radius:12px;background:#edf4f9;color:#83a8c6}.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}.cal-week{font-size:12px;color:#bb9f7d;text-align:center;padding:5px}.cal-day{min-height:67px;display:flex;flex-direction:column;align-items:center;gap:5px;border-radius:13px;font-size:14px;justify-content:center}.cal-day:hover{background:#f8eddb}.cal-day svg{width:17px;height:17px;color:#80afd0;transform:rotate(-12deg)}.cal-day>i{height:17px}.cal-day.went-out{background:#edf5fc;color:#558bb3;font-weight:600}.cal-day.is-today{outline:1px dashed #d6b58a;outline-offset:-2px}.lightbox{display:block;width:100%;max-height:65dvh;object-fit:contain;border-radius:15px}dialog{width:min(510px,calc(100vw - 24px));border:2px solid #f2dfbf;border-radius:25px;padding:25px;color:var(--ink);max-height:90dvh;background:#fffdf8;box-shadow:0 20px 100px #68472322}dialog::backdrop{background:#69523b66;backdrop-filter:blur(5px)}.dialog-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:23px}.icon-button{font-size:25px;width:34px;height:34px;border-radius:50%;background:#f5ead7;color:#ad8d61}.field{display:grid;gap:9px;margin-bottom:17px;font-size:12px;color:#92714e}.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid #e8d8bd;border-radius:11px;background:#fffcf6;color:#684c32;min-height:44px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:#87b3d5;box-shadow:0 0 0 3px #e6f1fb}.field textarea{min-height:82px;resize:vertical}.field small{font-size:10px;color:#bea17c;line-height:1.7}.field-row{display:grid;grid-template-columns:1fr 1fr;gap:13px}.dialog-actions{display:flex;justify-content:flex-end;align-items:center;gap:17px;margin-top:22px}.danger{color:#b97a61;font-size:12px;margin-right:auto;min-height:44px}.error{color:#b97a61;font-size:12px}.toast{position:fixed;bottom:33px;left:50%;transform:translate(-50%,20px);background:#765737;color:#fffaf2;padding:12px 22px;border-radius:15px;z-index:20;opacity:0;pointer-events:none;transition:.2s;font-size:12px}.toast.visible{opacity:1;transform:translate(-50%,0)}#confirm-body{font-size:12px;line-height:1.9}.preview-table{border-collapse:collapse;width:100%;font-size:11px}.preview-table td{padding:8px;border-bottom:1px solid var(--line)}#mobile-add{display:none}@keyframes page-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}@media(max-width:1100px){.sidebar{width:198px;padding:28px 16px}.brand{font-size:14px}.brand-avatar{width:40px;height:40px}.brand small{font-size:7px}main{margin-left:198px;padding:0 28px 40px}.mu-hero{padding:30px}.portrait{width:190px;height:205px;margin-right:0}.hero-copy h1{font-size:46px}.hero-copy h1>span{font-size:23px}.content-grid{gap:17px;grid-template-columns:1.3fr 1fr}.panel{padding:21px}.care-row{gap:8px}.care-status{font-size:9px}.moment img{height:150px}.stat{padding:19px 16px}.stat-value{font-size:29px}}@media(max-width:780px){.sidebar{inset:auto 0 0;width:100%;height:76px;padding:0 9px env(safe-area-inset-bottom);background:#fffcf6ed;backdrop-filter:blur(15px);border:0;border-top:1px solid #eddfc7;z-index:5;border-radius:22px 22px 0 0}.brand,.sidebar-bottom{display:none}nav{display:flex;justify-content:space-around;height:100%;gap:0;margin:0}nav a{flex:1;flex-direction:column;justify-content:center;gap:5px;border-radius:0;padding:9px 7px;font-size:10px;color:#bcab94}nav a:hover{background:none;transform:none}nav a.active{background:none;box-shadow:none;color:#719fc2}.nav-icon{padding:3px 13px;border-radius:18px}.active .nav-icon{background:#e5eff8}.nav-icon svg{width:22px;height:22px}main{margin:0;padding:0 19px 110px}header{height:61px;font-size:10px;border-bottom:0}.breadcrumb{gap:10px}.breadcrumb>span{color:#d5c2a3}.mu-hero{margin-top:5px;padding:25px 22px 20px;border-radius:24px;min-height:233px}.hero-copy h1{font-size:44px;margin-top:13px;letter-spacing:0}.hero-copy h1>span{font-size:20px;margin-top:2px;white-space:nowrap}.hero-copy>p{font-size:10px;margin:10px 0}.hero-copy>.text-button{font-size:9px}.blue-label{font-size:8px;padding:5px 9px}.hero-tags{display:block;margin:12px 0 9px}.hero-tags span{display:table;font-size:8px;padding:5px 7px;margin-top:6px}.portrait{width:138px;height:180px;padding:7px 7px 28px;margin:7px -5px 0 7px;border-radius:70px 70px 17px 17px;align-self:center}.portrait img{border-radius:65px 65px 11px 11px;object-position:58% 48%}.photo-caption{font-size:9px;bottom:9px}.photo-tape{width:46px;left:calc(50% - 23px);height:17px}.hero-paw{bottom:10px;right:6px}.hero-paw svg{height:27px;width:27px}.stats{gap:8px;margin:18px 0 24px}.stat{border-radius:16px;padding:14px 10px 12px;box-shadow:0 2px 0 #eddfc244}.stat-label{font-size:8px;gap:4px;white-space:nowrap}.stat-label svg{width:13px;height:13px}.stat-value{font-size:24px;letter-spacing:-.5px;margin:10px 0 6px}.stat-value small{font-size:8px;margin-left:3px}.stat-foot{font-size:8px;line-height:1.5;min-height:12px}.quick-section{margin:23px 0}.section-top{margin-bottom:14px}.section-top h2{font-size:15px}.section-top .text-button{font-size:9px}.quick{gap:7px}.quick button{font-size:9px;min-width:51px;padding:10px 4px 8px;border-radius:14px}.quick button>span{width:23px;height:23px;margin-bottom:7px}.quick button svg{width:22px;height:22px}.content-grid{display:block}.panel{padding:20px 17px;border-radius:21px;margin-bottom:20px}.chart-panel{min-height:260px}.chart{height:175px}.chart-note{font-size:9px;margin-top:6px}.growth-note{font-size:9px;padding:8px;margin-top:5px}.care-panel{margin-bottom:21px}.care-panel>.section-top{margin-bottom:7px}.care-row{gap:12px;padding:15px 0}.care-status{font-size:9px}.care-row strong{font-size:11px}.care-row p{font-size:10px}.outing-banner{padding:18px 15px;gap:12px;flex-wrap:wrap;border-radius:19px;margin-bottom:25px}.outing-paw svg{width:31px;height:31px}.outing-banner h2{font-size:14px}.outing-banner p{font-size:9px;max-width:246px}.outing-banner>.primary{margin-left:43px;padding:9px 14px;min-height:35px;font-size:10px;border-radius:12px}.photo-section{margin:25px 0}.photo-strip{gap:11px}.moment{padding:5px 5px 9px;border-radius:11px}.moment img{height:111px;border-radius:7px}.moment span{font-size:8px;padding-top:8px;white-space:nowrap}.record{grid-template-columns:34px minmax(0,1fr) 42px 7px;gap:10px;padding:15px 0}.record-icon{height:33px;width:33px;border-radius:11px}.record-icon svg{height:18px;width:18px}.record-title{font-size:11px}.record-detail{font-size:9px}.record-date{font-size:9px}.row-arrow{font-size:18px}.records-section{margin-top:23px}.heading{margin:22px 0 25px}.heading h1{font-size:27px}.heading .eyebrow{font-size:10px}.heading>.primary{display:none}.filters{gap:7px;margin-bottom:20px}.filters button{font-size:10px;padding:7px 13px}.profile-card{gap:14px}.profile-card>img{width:72px;height:72px;border-radius:24px;border-width:4px}.profile-card h2{font-size:22px}.profile-card p{font-size:10px}.profile-card>button{font-size:10px}.type-toggles{gap:9px}.type-toggle{font-size:10px;padding:13px 10px}.type-toggle span{gap:7px}.type-toggle svg{height:17px;width:17px}.settings-row h3{font-size:12px}.settings-row p{font-size:10px}.settings-row .secondary{font-size:10px;padding:9px 13px;white-space:nowrap}.food-stats strong{font-size:33px}.food-stats{gap:48px}.feeder>.muted{font-size:10px}.quick.inline button{font-size:10px}.outing-intro{padding:14px;gap:16px}.outing-intro>img{height:100px;width:100px}.outing-intro h2{font-size:17px;margin-top:10px}.outing-intro p{font-size:10px}.cal-grid{gap:4px}.cal-day{min-height:52px;font-size:12px;border-radius:11px}.cal-day svg{height:13px;width:13px}.cal-day>i{height:13px}.cal-week{font-size:10px}.cal-title{margin-bottom:18px}.cal-title h2{font-size:16px}.footer-note{font-size:8px;margin-top:25px}#mobile-add{display:block;position:fixed;right:21px;bottom:97px;height:48px;width:48px;border-radius:17px;background:#83afd0;color:white;font-size:27px;box-shadow:0 4px 0 #668eac;z-index:4}.toast{bottom:101px;white-space:nowrap;font-size:11px}dialog{padding:22px;border-radius:23px}.dialog-top h2{font-size:17px}.field-row{gap:10px}.field{font-size:11px}.lightbox{max-height:61dvh}.small{font-size:9px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.portrait-image{display:block;width:100%;height:100%;overflow:hidden;border-radius:95px 95px 16px 16px}.portrait-image img{transform:scale(1.48);border-radius:0;object-position:55% 55%}@media(max-width:780px){.portrait-image{border-radius:65px 65px 11px 11px}.portrait-image img{object-position:55% 54%;transform:scale(1.45)}}
+.care-focus{margin-top:22px}.care-plans{display:grid;grid-template-columns:1fr 1fr;gap:18px}.care-plan{display:flex;text-align:left;align-items:center;gap:12px;padding:16px;background:#fff7e8;border-radius:16px}.care-plan:nth-child(2){background:#edf5fc}.care-plan strong{font-size:13px}.care-plan p,.last-care{font-size:10px;color:#b19a7e;margin:6px 0}.care-next{margin-left:auto;text-align:right}.care-next b{font-size:21px;display:block;white-space:nowrap}.care-next small{font-size:10px;display:block;margin-top:6px;color:#9eacb5}.is-overdue .care-next{color:#b36f4d}.care-actions{display:flex;justify-content:space-between;margin-top:15px}.carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}.carousel::-webkit-scrollbar{display:none}.photo-slide{display:block;flex:0 0 100%;width:100%;height:100%;padding:0;scroll-snap-align:center;overflow:hidden}.photo-slide img{width:100%;height:100%;object-fit:cover}.photo-empty{background:#eee1cb;font-size:12px}.photo-dots{position:absolute;left:0;right:0;bottom:-18px;display:flex;justify-content:center;gap:6px}.photo-dots button{width:5px;height:5px;border-radius:50%;background:#ccb99b;padding:0}.photo-dots .selected{background:#7faaca;width:14px;border-radius:5px}.album-view{position:relative}.album-view img{width:100%;height:52vh;object-fit:contain;border-radius:15px}.album-view>button{position:absolute;top:45%;background:#fff9eddd;border-radius:50%;width:36px;height:36px;font-size:25px}.album-view>button:first-of-type{left:4px}.album-view>button:last-of-type{right:4px}.album-actions{display:flex;align-items:center;gap:15px;flex-wrap:wrap}.health-entry{display:flex;flex-direction:column;align-items:flex-start;gap:14px}.health-symbol{font-size:43px;color:#89b5d3}.share-link{width:100%;padding:14px;border:1px solid #dcc5a3;border-radius:10px}.stat-label>svg{flex-shrink:0}.family-panel{margin-top:20px}@media(max-width:780px){.care-focus{margin-top:22px;padding:18px 14px}.care-focus h2{font-size:14px}.care-plans{grid-template-columns:1fr;gap:9px}.care-plan{padding:12px;gap:10px}.care-plan strong{font-size:12px}.care-next b{font-size:20px}.care-plan p,.last-care{font-size:9px}.care-focus .chart-note{font-size:8px}.quick{display:grid;grid-template-columns:repeat(3,1fr)}.quick button{min-height:60px}.health-entry{gap:10px}.photo-slide{min-width:100%}}
+</style><style>/* Comfortable phone reading without changing the desktop composition. */
+@media (max-width:780px) {
+  :root { --muted:#7d6b59; }
+  body { font-size:16px; line-height:1.6; -webkit-text-size-adjust:100%; }
+  main { padding:0 16px 126px; }
+  header { font-size:13px; }
+  .mu-hero { padding:24px 18px; }
+  .hero-copy { min-width:0; }
+  .hero-copy h1 { font-size:44px; }
+  .hero-copy h1>span { font-size:22px; }
+  .hero-copy>p { font-size:14px; color:#80603e; max-width:10em; }
+  .hero-copy>.text-button { font-size:13px; text-align:left; white-space:normal; }
+  .blue-label { font-size:12px; padding:5px 9px; }
+  .hero-tags span { font-size:12px; color:#7d5837; }
+  .portrait { width:132px; height:180px; margin-left:10px; }
+  .photo-caption { font-size:12px; }
+  h2,.section-top h2,.care-focus h2,.dialog-top h2 { font-size:19px; line-height:1.5; }
+  h3,.settings-row h3 { font-size:16px; }
+  .section-top { align-items:flex-start; }
+  .text-button,.section-top .text-button { font-size:14px; min-height:44px; display:inline-flex; align-items:center; }
+  .primary,.secondary,.settings-row .secondary,.profile-card>button,.quick.inline button { font-size:15px; min-height:44px; padding:11px 15px; }
+  .primary { white-space:normal; }
+  .stat { padding:16px 13px; }
+  .stats { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .stat:first-child { grid-column:1/-1; }
+  .stat:first-child .stat-value { font-size:36px; }
+  .stat-label { font-size:14px; color:#80684e; white-space:normal; }
+  .stat-label svg { width:18px; height:18px; }
+  .stat-value { font-size:30px; }
+  .stat-value small,.stat-foot { font-size:13px; color:#806b55; }
+  .quick button { font-size:15px; padding:13px 8px; min-height:80px; }
+  .quick button>span { width:26px; height:26px; }
+  .quick button svg { width:26px; height:26px; }
+  .chart-note,.care-focus .chart-note,.growth-note,.care-row p,.care-status,.small,
+  .note,.empty,.feeder>.muted,.settings-row p,.profile-card p,.outing-intro p { font-size:14px; line-height:1.8; color:#806d58; }
+  .chart { height:195px; }
+  .chart text { font-size:13px; fill:#806d58; }
+  .care-focus { padding:20px 16px; }
+  .care-focus .section-top { flex-wrap:wrap; gap:4px; }
+  .care-focus .section-top>button { margin-left:auto; }
+  .care-plan { padding:15px 12px; gap:10px; flex-wrap:wrap; }
+  .care-plan strong,.care-row strong { font-size:16px; }
+  .care-plan p,.last-care,.care-next small { font-size:13px; color:#806b55; line-height:1.7; }
+  .care-next b { font-size:22px; }
+  .care-next { min-width:76px; }
+  .care-actions { flex-wrap:wrap; align-items:center; gap:8px; }
+  .mini-badge { font-size:16px; }
+  .outing-banner h2 { font-size:18px; }
+  .outing-banner p { font-size:14px; color:#597d99; max-width:none; }
+  .outing-banner>.primary { font-size:15px; min-height:44px; margin-left:0; }
+  .photo-strip { display:flex; overflow-x:auto; padding:5px 3px; scroll-snap-type:x mandatory; }
+  .moment { flex:0 0 65%; scroll-snap-align:start; }
+  .moment img { height:150px; }
+  .moment span { font-size:13px; white-space:normal; color:#806b55; }
+  .record { grid-template-columns:34px minmax(0,1fr) 55px 7px; }
+  .record-title { font-size:16px; }
+  .record-detail { font-size:14px; color:#806b55; }
+  .record-date { font-size:13px; color:#806b55; }
+  .filters button { font-size:14px; min-height:44px; }
+  .type-toggle { font-size:14px; min-height:52px; }
+  .profile-card { flex-wrap:wrap; }
+  .profile-card>button { margin-left:0; }
+  .food-stats { gap:24px; flex-wrap:wrap; }
+  .food-stats p { font-size:14px; color:#806b55; }
+  .cal-week { font-size:13px; }
+  .cal-day { font-size:16px; min-height:54px; }
+  .cal-title h2 { font-size:19px; }
+  .outing-intro { flex-wrap:wrap; }
+  .outing-intro h2 { font-size:19px; }
+  .field { font-size:15px; }
+  .field input,.field select,.field textarea { font-size:16px; min-height:48px; }
+  .field small { font-size:13px; color:#806b55; }
+  .field-row { gap:12px; }
+  .dialog-actions { flex-wrap:wrap; }
+  .danger,.error,#confirm-body { font-size:15px; }
+  .preview-table { font-size:14px; }
+  .share-link { font-size:16px; }
+  .icon-button { width:44px; height:44px; flex-shrink:0; }
+  .toast { font-size:14px; white-space:normal; width:max-content; max-width:calc(100vw - 32px); }
+  .footer-note { font-size:12px; color:#8b7760; }
+  .sidebar { height:calc(82px + env(safe-area-inset-bottom)); }
+  nav a { font-size:13px; line-height:1.4; color:#87735b; }
+  #mobile-add { bottom:calc(102px + env(safe-area-inset-bottom)); }
+}
+@media (max-width:360px) {
+  .mu-hero { padding:20px 14px; }
+  .portrait { width:112px; height:160px; margin-left:8px; }
+  .hero-copy h1>span { font-size:20px; }
+  .field-row { grid-template-columns:1fr; }
+  .type-toggles { grid-template-columns:1fr; }
+}
+</style></head>
+<body><aside class="sidebar"><a class="brand" href="#home"><img class="brand-avatar" src="./mu-avatar.jpg" alt="小μ"/><span>小μ的成长日记<small>MY LITTLE BENGAL GIRL</small></span></a><nav id="nav"></nav><div class="sidebar-bottom"><span class="dot"></span><span id="sync-status">此设备保存</span><button id="backup-short" class="text-button">导出备份 ↗</button></div></aside><main><header><div class="breadcrumb">我的猫咪 <span>/</span> <b id="page-title">成长概览</b></div><span id="today"></span></header><div id="content"></div></main><button id="mobile-add" aria-label="添加记录">＋</button><dialog id="editor"><form id="record-form"><div class="dialog-top"><h2 id="editor-title">记一笔</h2><button type="button" class="icon-button" id="close-editor" aria-label="关闭">×</button></div><div id="form-fields"></div><p id="form-error" class="error" role="alert"></p><div class="dialog-actions"><button type="button" id="delete-record" class="danger">删除记录</button><button class="primary" type="submit">保存记录 ↗</button></div></form></dialog><dialog id="confirm"><div class="dialog-top"><h2 id="confirm-title"></h2><button class="icon-button" id="close-confirm" aria-label="关闭">×</button></div><div id="confirm-body"></div><div class="dialog-actions"><button class="primary" id="confirm-action">确认</button></div></dialog><div class="toast" id="toast" role="status"></div><dialog id="album-editor"><div class="dialog-top"><h2>小μ的相册</h2><button id="close-album" class="icon-button" aria-label="关闭相册">×</button></div><div id="album-content"></div></dialog><input id="photo-upload" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden><input id="backup-file" type="file" accept=".json,application/json" hidden><input id="csv-file" type="file" accept=".csv,text/csv" hidden><script>(function (root, factory) {
+  if (typeof module === 'object' && module.exports) module.exports = factory();
+  else root.MuModel = factory();
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  const TYPES = [
+    { id: 'weight', name: '体重', icon: '⚖', unit: 'kg' },
+    { id: 'deworm', name: '驱虫', icon: '✦' },
+    { id: 'meal', name: '吃饭', icon: '◒', unit: 'g' },
+    { id: 'food', name: '换粮', icon: '⇄' },
+    { id: 'health', name: '健康', icon: '♡' },
+    { id: 'daily', name: '日常', icon: '☀' },
+    { id: 'outing', name: '出去玩', icon: '♧' },
+    { id: 'illness', name: '生病记录', icon: '♡' }
+  ];
+  function today() {
+    const d = new Date();
+    return [d.getFullYear(), String(d.getMonth() + 1).padStart(2, '0'), String(d.getDate()).padStart(2, '0')].join('-');
+  }
+  function validDate(s) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(s || '')) return false;
+    const d = new Date(s + 'T12:00:00');
+    return !isNaN(d) && [d.getFullYear(), String(d.getMonth()+1).padStart(2,'0'), String(d.getDate()).padStart(2,'0')].join('-') === s;
+  }
+  function seed() {
+    const weights = [['08-25',1.25],['08-29',1.40],['09-10',1.60],['09-20',1.85],['09-28',2.10],['10-07',2.20],['10-14',2.35]];
+    return { version: 1, seedRevision: 3, photos: defaultPhotos(), photoTrash: [], care: defaultCare(), settings: { hiddenTypes: ['health','daily'] }, trash: [], profile: { name: '小μ', breed: '孟加拉豹猫', sex: '母', birthday: '2026-05-18', arrival: '2026-10-25', arrivalNote: '周日晚上', ageNote: '', feeder: '喜瓜' }, records: weights.map(([day,value])=>({id:'photo-weight-'+day,type:'weight',date:'2026-'+day,time:'',value,title:'体重',note:'',source:'主人截图'})).concat([
+      {id:'photo-deworm-0822',type:'deworm',date:'2026-08-22',time:'',scope:'体外',product:'',dose:'',title:'驱虫',note:'',source:'主人截图'},
+      {id:'photo-deworm-0829',type:'deworm',date:'2026-08-29',time:'',scope:'体内',product:'',dose:'',title:'驱虫',note:'',source:'主人截图'},
+      {id:'photo-deworm-1007',type:'deworm',date:'2026-10-07',time:'',scope:'体外',product:'',dose:'',title:'驱虫',note:'',source:'主人截图'},
+      {id:'outing-20261026',type:'outing',date:'2026-10-26',time:'',title:'出去玩',note:'',place:'',duration:'',source:'主人提供（周一）'}
+    ]) };
+  }
+  function defaultPhotos(){return ['mu-avatar.jpg','mu-play.jpg','mu-window.jpg','mu-sofa.jpg'].map((file,i)=>({id:'original-'+i,src:'asset:'+file,caption:'小μ的可爱瞬间'}));}
+  function defaultCare(){return {internal:{product:'海乐妙幼猫片',ingredients:'米尔贝肟4mg＋吡喹酮10mg',reportedDose:'幼猫片1颗（主人提供，非下次剂量）',nextDate:''},external:{product:'',nextDate:''},leadDays:3};}
+  function migrate(state) {
+    let result=state;
+    if ((result.seedRevision||0)<2){
+      const initial=seed(), records=result.records.filter(r=>r.id!=='initial-weight');
+      initial.records.forEach(r=>{if(!records.some(x=>x.id===r.id||(x.type===r.type&&x.date===r.date&&(r.type!=='deworm'||x.scope===r.scope))))records.push(r);});
+      result={...result,seedRevision:2,settings:result.settings||initial.settings,trash:result.trash||[],profile:{...result.profile,birthday:initial.profile.birthday,ageNote:'',feeder:result.profile.feeder||'喜瓜'},records:sort(records)};
+    }
+    if((result.seedRevision||0)<3)result={...result,seedRevision:3,profile:{...result.profile,arrival:result.profile.arrival||'2026-10-25',arrivalNote:'周日晚上'},photos:result.photos||defaultPhotos(),photoTrash:result.photoTrash||[],care:result.care||defaultCare()};
+    return result;
+  }
+  function setCare(state,input){
+    const next={...defaultCare(),...state.care,internal:{...defaultCare().internal,...state.care?.internal,...input.internal},external:{...defaultCare().external,...state.care?.external,...input.external},leadDays:input.leadDays==null?(state.care?.leadDays??3):Number(input.leadDays)};
+    if(!Number.isInteger(next.leadDays)||next.leadDays<0||next.leadDays>30)throw new Error('提前提醒天数需为0–30的整数');
+    for(const scope of ['internal','external'])if(next[scope].nextDate&&!validDate(next[scope].nextDate))throw new Error('请填写有效的下次驱虫日期');
+    return {...state,care:next};
+  }
+  function normalizePhoto(p){
+    const src=String(p.src||'');
+    if(!(/^(asset:mu-[a-z]+\.jpg|data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+|\/api\/photos\/[a-zA-Z0-9-]+|wxfile:\/\/[^\s]+|https:\/\/[^\s]+)$/.test(src)))throw new Error('照片地址格式不正确');
+    if(!p.id||typeof p.id!=='string')throw new Error('照片ID无效');
+    return {id:p.id,src,caption:String(p.caption||'小μ的可爱瞬间')};
+  }
+  function addPhotos(state,photos){return {...state,photos:(state.photos||[]).concat(photos.map(normalizePhoto))};}
+  function removePhoto(state,id){const p=(state.photos||[]).find(p=>p.id===id);return p?{...state,photos:state.photos.filter(x=>x.id!==id),photoTrash:(state.photoTrash||[]).concat(p)}:state;}
+  function undoPhoto(state){const trash=(state.photoTrash||[]).slice(),p=trash.pop();return p?{...state,photos:(state.photos||[]).concat(p),photoTrash:trash}:state;}
+  function activeTypes(state) { return TYPES.filter(t=>!(state.settings?.hiddenTypes||[]).includes(t.id)); }
+  function toggleType(state,id) {
+    if(!TYPES.some(t=>t.id===id))throw new Error('未知记录类型');
+    const hidden=state.settings?.hiddenTypes||[];
+    return {...state,settings:{...state.settings,hiddenTypes:hidden.includes(id)?hidden.filter(x=>x!==id):hidden.concat(id)}};
+  }
+  function remove(state,id) {
+    const r=state.records.find(r=>r.id===id);if(!r)return state;
+    return {...state,records:state.records.filter(r=>r.id!==id),trash:(state.trash||[]).filter(x=>x.id!==id).concat(r)};
+  }
+  function undo(state) {
+    const trash=(state.trash||[]).slice(),r=trash.pop();if(!r)return state;
+    return {...state,trash,records:sort(state.records.filter(x=>x.id!==r.id).concat(r))};
+  }
+  function number(value, label, allowZero) {
+    if (value === '' || (typeof value === 'string' && !value.trim()) || value === null || value === undefined || !Number.isFinite(Number(value)) || (allowZero ? Number(value) < 0 : Number(value) <= 0)) throw new Error(label + (allowZero ? '需为不小于0的数字' : '需为大于0的数字'));
+    return Number(value);
+  }
+  function record(input) {
+    if (!TYPES.some(t => t.id === input.type)) throw new Error('请选择记录类型');
+    if (!validDate(input.date)) throw new Error('请填写有效日期');
+    if (input.date > today()) throw new Error('实际记录不能填写未来日期；计划请填写下次日期');
+    if (input.time && !/^([01]\d|2[0-3]):[0-5]\d$/.test(input.time)) throw new Error('时间格式应为 HH:mm');
+    if (input.id && (typeof input.id !== 'string' || input.id.length > 150)) throw new Error('记录ID无效');
+    const r = { id: input.id || Date.now().toString(36) + Math.random().toString(36).slice(2, 8), type: input.type, date: input.date, time: input.time || '', title: String(input.title || TYPES.find(t=>t.id===input.type).name).trim(), note: String(input.note || ''), source: String(input.source || '手动记录') };
+    if (input.type === 'weight') r.value = number(input.value, '体重', false);
+    if (input.type === 'meal') {
+      r.value = number(input.value, '克数', true);
+      r.mealKind = ['fed','dispensed','eaten'].includes(input.mealKind)?input.mealKind:'fed';
+      r.foodType = ['干粮','湿粮','零食','其他'].includes(input.foodType) ? input.foodType : '干粮';
+    }
+    if (input.type === 'deworm') {
+      r.scope = ['体内','体外','内外同驱'].includes(input.scope) ? input.scope : '内外同驱';
+      r.product = String(input.product || '').trim();
+      r.dose = String(input.dose || '');
+    }
+    if (input.type === 'food') {
+      r.ratio = number(input.ratio, '新粮占比', true);
+      if (r.ratio > 100) throw new Error('新粮占比不能超过100%');
+    }
+    if (input.type === 'outing') {
+      r.place=String(input.place||''); r.duration=input.duration === '' || input.duration == null ? '' : number(input.duration,'游玩分钟',true);
+    }
+    if(input.type==='illness'){r.symptoms=String(input.symptoms||input.title||'').trim();if(!r.symptoms||r.symptoms==='生病记录')throw new Error('请写下观察到的症状');r.status=['观察中','已就诊','已康复'].includes(input.status)?input.status:'观察中';r.treatment=String(input.treatment||'');}
+    if (input.type === 'health' || input.type === 'daily') r.category = String(input.category || (input.type === 'health' ? '疫苗' : '便便'));
+    if (input.nextDate) {
+      if (!validDate(input.nextDate) || input.nextDate <= input.date) throw new Error('下次日期应晚于本次记录日期');
+      r.nextDate = input.nextDate;
+    }
+    return r;
+  }
+  function sort(records) { return records.slice().sort((a,b) => (b.date + (b.time || '')).localeCompare(a.date + (a.time || '')) || b.id.localeCompare(a.id)); }
+  function save(state, input) {
+    const r = record(input);
+    const next={...state, records:sort(state.records.filter(x=>x.id!==r.id).concat(r))};
+    if(r.type==='deworm'&&r.nextDate){next.care={...defaultCare(),...state.care,internal:{...defaultCare().internal,...state.care?.internal},external:{...defaultCare().external,...state.care?.external}};for(const k of (r.scope==='内外同驱'?['internal','external']:[r.scope==='体内'?'internal':'external']))next.care[k]={...next.care[k],nextDate:r.nextDate,product:r.product||next.care[k].product};}
+    return next;
+  }
+  function profile(state, input) {
+    const p = { ...state.profile, ...input, name: String(input.name || '').trim() };
+    if (!p.name) throw new Error('请填写名字');
+    if (p.birthday && (!validDate(p.birthday) || p.birthday > today())) throw new Error('生日应为有效的过去日期');
+    if(p.arrival&&(!validDate(p.arrival)||p.arrival>today()))throw new Error('到家日期应为有效的过去日期');
+    return { ...state, profile: p };
+  }
+  function describe(r) {
+    if (r.type === 'weight') return Number(r.value).toFixed(2) + ' kg';
+    if (r.type === 'meal') return (r.mealKind === 'dispensed' ? '出粮 ' : r.mealKind==='fed'?'投喂 ':'实吃 ') + r.value + ' g' + (r.foodType ? ' · ' + r.foodType : '');
+    if (r.type === 'deworm') return r.scope + (r.product ? ' · ' + r.product : ' · 药名未记录') + (r.dose ? ' · ' + r.dose : '');
+    if (r.type === 'food') return '新粮占比 ' + r.ratio + '%';
+    if(r.type==='outing') return (r.place||'出去玩啦')+(r.duration!==''&&r.duration!=null?' · '+r.duration+'分钟':'');
+    if(r.type==='illness')return r.symptoms+' · '+r.status+(r.treatment?' · '+r.treatment:'');
+    return r.category + (r.title && r.title !== '健康' && r.title !== '日常' ? ' · ' + r.title : '');
+  }
+  function summary(state, date) {
+    const now = date || today();
+    const weights = sort(state.records.filter(r=>r.type==='weight'));
+    const meals = state.records.filter(r=>r.type==='meal' && r.date===now);
+    // Only the newest plan for each protection scope remains active; combined products replace both scopes.
+    const latest = {};
+    sort(state.records).forEach(r => {
+      const keys = r.type === 'deworm' ? (r.scope === '内外同驱' ? ['deworm:体内','deworm:体外'] : ['deworm:'+r.scope]) : r.type === 'health' ? ['health:'+r.category+':'+r.title] : [];
+      keys.forEach(k=>{ if (!(k in latest)) latest[k]=r; });
+    });
+    let reminders = Array.from(new Map(Object.values(latest).filter(r=>r.nextDate).map(r=>[r.id,r])).values()).sort((a,b)=>a.nextDate.localeCompare(b.nextDate)).map(r=>({ ...r, overdue: r.nextDate < now, due: r.nextDate === now }));
+    for(const [key,scope] of [['internal','体内'],['external','体外']]){const plan=state.care?.[key];if(plan?.nextDate){reminders=reminders.filter(r=>r.type!=='deworm'||![scope,'内外同驱'].includes(r.scope));reminders.push({id:'plan-'+key,type:'deworm',scope,product:plan.product||'',nextDate:plan.nextDate,overdue:plan.nextDate<now,due:plan.nextDate===now,planKey:key});}}
+    reminders=reminders.sort((a,b)=>a.nextDate.localeCompare(b.nextDate)).map(r=>({...r,daysUntil:Math.round((new Date(r.nextDate+'T12:00:00')-new Date(now+'T12:00:00'))/86400000)}));
+    const arrivalDays=state.profile.arrival?Math.floor((new Date(now+'T12:00:00')-new Date(state.profile.arrival+'T12:00:00'))/86400000):null;
+    let age = state.profile.ageNote || '生日待补充';
+    if (state.profile.birthday) {
+      const b = new Date(state.profile.birthday+'T12:00:00'), n = new Date(now+'T12:00:00');
+      let months = (n.getFullYear()-b.getFullYear())*12+n.getMonth()-b.getMonth();
+      if (n.getDate()<b.getDate()) months--;
+      age = months < 1 ? Math.max(0, Math.floor((n-b)/86400000))+'天' : months+'个月';
+    }
+    const lastOuting=sort(state.records.filter(r=>r.type==='outing'))[0]||null;
+    const daysSinceOuting=lastOuting?Math.floor((new Date(now+'T12:00:00')-new Date(lastOuting.date+'T12:00:00'))/86400000):null;
+    const lastInternal=sort(state.records.filter(r=>r.type==='deworm'&&['体内','内外同驱'].includes(r.scope)))[0]||null;
+    const lastExternal=sort(state.records.filter(r=>r.type==='deworm'&&['体外','内外同驱'].includes(r.scope)))[0]||null;
+    return { arrivalDays,lastOuting,daysSinceOuting,lastInternal,lastExternal,age, weight: weights[0] || null, delta: weights.length>1 ? Math.round((weights[0].value-weights[1].value)*1000)/1000 : null, weights: weights.slice().reverse(), fed: meals.filter(r=>r.mealKind!=='eaten').reduce((n,r)=>n+r.value,0), fedCount: meals.filter(r=>r.mealKind!=='eaten').length, eaten: meals.filter(r=>r.mealKind==='eaten').reduce((n,r)=>n+r.value,0), dispensed: meals.filter(r=>r.mealKind==='dispensed').reduce((n,r)=>n+r.value,0), eatenCount: meals.filter(r=>r.mealKind==='eaten').length, dispensedCount: meals.filter(r=>r.mealKind==='dispensed').length, mealCount: meals.length, reminders };
+  }
+  function restore(raw) {
+    const s = typeof raw === 'string' ? JSON.parse(raw) : raw;
+    if (!s || s.version!==1 || !s.profile || !Array.isArray(s.records)) throw new Error('备份格式不正确');
+    if (s.records.length>20000) throw new Error('记录数量超过导入上限');
+    let result = profile({version:1,profile:seed().profile,records:[]},s.profile);
+    const ids = new Set();
+    result.records = s.records.map(r=>{ const clean=record(r); if(ids.has(clean.id))throw new Error('备份包含重复记录'); ids.add(clean.id); return clean; });
+    if(s.photos!==undefined)result.photos=s.photos.map(normalizePhoto);
+    result.photoTrash=Array.isArray(s.photoTrash)?s.photoTrash.map(normalizePhoto):[];
+    if(s.care)result.care=setCare(result,s.care).care;
+    result.seedRevision=Number(s.seedRevision)||0;
+    result.settings={hiddenTypes:Array.isArray(s.settings?.hiddenTypes)?s.settings.hiddenTypes.filter(id=>TYPES.some(t=>t.id===id)):['health','daily']};
+    result.trash=Array.isArray(s.trash)?s.trash.map(record):[];
+    return result;
+  }
+  function parseCSV(text) {
+    const rows=[];let row=[],cell='',quote=false;
+    text=String(text).replace(/^\uFEFF/,'');
+    for(let i=0;i<text.length;i++) { const c=text[i]; if(c==='"'){if(quote&&text[i+1]==='"'){cell+='"';i++;}else quote=!quote;}else if(c===','&&!quote){row.push(cell);cell='';}else if((c==='\n'||c==='\r')&&!quote){if(c==='\r'&&text[i+1]==='\n')i++;row.push(cell);if(row.some(x=>x!==''))rows.push(row);row=[];cell='';}else cell+=c; }
+    if(quote)throw new Error('CSV引号未闭合');row.push(cell);if(row.some(x=>x!==''))rows.push(row);
+    if(rows.length<2)throw new Error('CSV需要表头和至少一条记录');
+    const headers=rows.shift().map(x=>x.trim());
+    const required=['date','time','grams','kind'];if(!required.every(k=>headers.includes(k)))throw new Error('表头需要 date,time,grams,kind');
+    return rows.map((r,i)=>{const o=Object.fromEntries(headers.map((h,j)=>[h,(r[j]||'').trim()])); if(!['eaten','dispensed','fed'].includes(o.kind))throw new Error('第'+(i+2)+'行 kind 只能填 eaten、fed 或 dispensed');return record({type:'meal',date:o.date,time:o.time,value:o.grams,mealKind:o.kind,foodType:o.foodType,source:'CSV导入'});});
+  }
+  function importMeals(state, text) {
+    const rs=parseCSV(text);const key=r=>[r.date,r.time,r.value,r.mealKind,r.foodType].join('|');const seen=new Set(state.records.filter(r=>r.type==='meal').map(key));let added=0;
+    const records=state.records.slice();rs.forEach(r=>{if(!seen.has(key(r))){records.push(r);seen.add(key(r));added++;}});
+    return {state:{...state,records:sort(records)},added};
+  }
+  return { TYPES,defaultPhotos,defaultCare,setCare,normalizePhoto,addPhotos,removePhoto,undoPhoto,migrate,activeTypes,toggleType,remove,undo,today,validDate,seed,record,save,profile,sort,describe,summary,restore,parseCSV,importMeals };
+});
+</script><script>(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory();else root.MuSync=factory();})(typeof globalThis!=='undefined'?globalThis:this,function(){
+// Field and entity patches let two family members add different records without replacing each other.
+const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+function diffState(before,after){
+  const patch={objects:{},lists:{}};
+  for(const key of ['profile','settings','care'])if(!same(before[key],after[key])){
+    if(key==='care'){patch.objects.care={};for(const k of ['internal','external','leadDays'])if(!same(before.care?.[k],after.care?.[k]))patch.objects.care[k]=after.care[k];}
+    else{patch.objects[key]={};for(const k of Object.keys(after[key]||{}))if(!same(before[key]?.[k],after[key][k]))patch.objects[key][k]=after[key][k];}
+  }
+  for(const key of ['records','trash','photos','photoTrash']){
+    const a=new Map((before[key]||[]).map(x=>[x.id,x])),b=new Map((after[key]||[]).map(x=>[x.id,x]));
+    const upsert=[...b.values()].filter(x=>!same(a.get(x.id),x)),remove=[...a.keys()].filter(id=>!b.has(id));
+    if(upsert.length||remove.length)patch.lists[key]={upsert,remove};
+  }
+  return patch;
+}
+function applyPatch(state,patch){
+  const out={...state};
+  for(const key of ['profile','settings','care'])if(patch.objects?.[key])out[key]={...state[key],...patch.objects[key]};
+  for(const key of ['records','trash','photos','photoTrash'])if(patch.lists?.[key]){const p=patch.lists[key],items=new Map((state[key]||[]).map(x=>[x.id,x]));for(const id of p.remove||[])items.delete(id);for(const x of p.upsert||[])items.set(x.id,x);out[key]=[...items.values()];}
+  return out;
+}
+
+return {diffState,applyPatch};
+});</script><script>window.MU_CLOUD_ORIGIN="";window.MU_CLOUD_DISABLED=true;</script><script>(function(){
+  const base=window.MU_CLOUD_ORIGIN||location.origin,PARAM='mu-family-active-v1';
+  const enabled=!window.MU_CLOUD_DISABLED;
+  const incoming=enabled&&new URLSearchParams(location.hash.split('?')[1]||'').get('family');
+  if(incoming&&/^[a-f0-9]{64}$/.test(incoming)){localStorage.setItem(PARAM,incoming);history.replaceState(null,'',location.pathname+location.search+'#'+(location.hash.slice(1).split('?')[0]||'home'));}
+  let token=enabled?(localStorage.getItem(PARAM)||''):'',version=0,pending=[],remote=null,running=false,ready=!token,callback=()=>{},statusCallback=()=>{};
+  const key=()=>token?'xiaomu-growth-v1-family-'+token.slice(0,12):'xiaomu-growth-v1';
+  const outbox=()=>key()+'-outbox';
+  const auth=()=>({'Authorization':'Bearer '+token,'Content-Type':'application/json'});
+  const apply=(s,p)=>window.MuSync.applyPatch(s,p);
+  const stateWithPending=()=>pending.reduce(apply,remote);
+  const persist=()=>localStorage.setItem(outbox(),JSON.stringify(pending));
+  async function read(){const r=await fetch(base+'/api/family',{headers:auth(),cache:'no-store'});const data=await r.json();if(!r.ok)throw new Error(data.error||'无法读取家庭记录');remote=data.state;version=data.version;ready=true;if(!running)callback(stateWithPending());return data;}
+  async function flush(){if(!token||running||!pending.length)return;running=true;statusCallback('正在同步');try{if(!version)await read();let attempts=0;while(pending.length){const r=await fetch(base+'/api/family',{method:'PATCH',headers:auth(),body:JSON.stringify({version,patch:pending[0]})});const data=await r.json();if(r.status===409&&attempts++<5){remote=data.state;version=data.version;continue;}if(!r.ok)throw new Error(data.error||'同步失败');pending.shift();persist();remote=data.state;version=data.version;attempts=0;callback(stateWithPending());}statusCallback('家人共享 · 已同步');}catch(e){statusCallback('本机已保存 · 待同步');}finally{running=false;}}
+  window.MuCloud={
+    get enabled(){return enabled;},get token(){return token;},get ready(){return ready;},get storageKey(){return key();},get base(){return base;},
+    async start(onState,onStatus){callback=onState;statusCallback=onStatus;if(token){try{pending=JSON.parse(localStorage.getItem(outbox())||'[]');statusCallback('正在读取家庭记录');await read();statusCallback('家人共享 · 已同步');await flush();}catch(e){statusCallback('共享暂时离线');}}else statusCallback('此设备保存');},
+    enqueue(before,after){if(!token)return;pending.push(window.MuSync.diffState(before,after));persist();void flush();},
+    async share(state){if(!enabled)throw Error('此网页版暂未配置家庭同步，记录保存在此设备');if(!token){const r=await fetch(base+'/api/family',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({state})});const data=await r.json();if(!r.ok)throw new Error(data.error||'创建共享失败');token=data.token;localStorage.setItem(PARAM,token);remote=data.state;version=data.version;ready=true;pending=[];persist();localStorage.setItem(key(),JSON.stringify(state));statusCallback('家人共享 · 已同步');}return base+'/web/index.html#home?family='+token;},
+    async upload(file){const form=new FormData();form.append('file',file,'mu-photo.jpg');const r=await fetch(base+'/api/photos',{method:'POST',headers:{Authorization:'Bearer '+token},body:form});const d=await r.json();if(!r.ok)throw new Error(d.error||'照片上传失败');return d;},
+    photoURL(src){return src.startsWith('/api/photos/')?base+src:src;},
+  };
+  addEventListener('online',()=>{void flush();});
+  setInterval(()=>{if(!token||document.hidden||running)return;if(pending.length)void flush();else void read().then(()=>statusCallback('家人共享 · 已同步')).catch(()=>statusCallback('共享暂时离线'));},12000);
+})();
+</script><script>/* 小μ的私人日记：与微信版共用记录模型，照片仅在本机提供。 */
+const M=window.MuModel; let KEY=window.MuCloud?.storageKey||'xiaomu-growth-v1';
+const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const assets='./';
+let albumIndex=0,syncLabel='此设备保存';
+let state, loadError='', filter='all', editing=null, mode='record', pending=null, calendarMonth=M.today().slice(0,7);
+try{const raw=localStorage.getItem(KEY);state=raw?M.migrate(M.restore(raw)):M.seed();if(raw){if(!JSON.parse(raw).seedRevision)localStorage.setItem(KEY+'-before-v2',raw);localStorage.setItem(KEY,JSON.stringify(state));}}catch(e){state=M.seed();loadError='读取已有记录失败，原始数据未被覆盖。请先导出原始备份。';}
+function commit(next){if(window.MuCloud?.token&&!window.MuCloud.ready){toast('正在读取家庭记录，请稍候');return false;}try{const before=state;localStorage.setItem(KEY,JSON.stringify(next));state=next;window.MuCloud?.enqueue(before,next);loadError='';return true;}catch(e){toast('保存失败：设备空间不足，请先导出备份');return false;}}
+function toast(s){$('#toast').textContent=s;$('#toast').classList.add('visible');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').classList.remove('visible'),3000);}
+function icon(name){const paths={home:'M3 10 12 3l9 7v10H3V10Zm6 10v-7h6v7',records:'M5 4h14v17H5V4Zm4-2h6v4H9V2m0 8h6m-6 4h6m-6 4h4',outings:'M12 21s8-7 8-12a8 8 0 0 0-16 0c0 5 8 12 8 12Zm0-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6',profile:'M20 21v-2a6 6 0 0 0-6-6h-4a6 6 0 0 0-6 6v2m13-15a5 5 0 1 1-10 0 5 5 0 0 1 10 0',weight:'M3 7h18v14H3V7Zm5 0a4 4 0 0 1 8 0m-4 4 3 3m-3-3-2 3',deworm:'M12 2 3 6v6c0 5 9 10 9 10s9-5 9-10V6l-9-4Zm-4 10 3 3 5-6',meal:'M3 12h18c0 6-3 9-9 9s-9-3-9-9Zm5-9v4m4-5v5m4-4v4',food:'M4 8h15l-4-4m5 12H5l4 4',health:'M20 4c-4-4-8 1-8 1S8 0 4 4c-5 5 8 16 8 16S25 9 20 4Z',daily:'M12 3v2m0 14v2M3 12h2m14 0h2M5 5l2 2m10 10 2 2M5 19l2-2M17 7l2-2m-2 7a5 5 0 1 1-10 0 5 5 0 0 1 10 0',outing:'M12 21s8-7 8-12a8 8 0 0 0-16 0c0 5 8 12 8 12Zm0-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6'};return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${paths[name==='illness'?'health':name]||paths.daily}"/></svg>`;}
+const paw='<svg viewBox="0 0 36 36" aria-hidden="true" fill="currentColor"><ellipse cx="8" cy="12" rx="4" ry="5" transform="rotate(-25 8 12)"/><ellipse cx="16" cy="7" rx="4" ry="5"/><ellipse cx="25" cy="10" rx="4" ry="5" transform="rotate(20 25 10)"/><ellipse cx="30" cy="19" rx="3.5" ry="4.5" transform="rotate(30 30 19)"/><path d="M10 23c5-10 12-9 15 0 7 12-3 10-7 8-9 2-15 0-8-8Z"/></svg>';
+const tabs=[['home','小μ日记'],['records','记录本'],['outings','出去玩'],['profile','小μ档案']];
+function heading(title,sub='小小的日子，认真收藏。',add=''){return `<div class="heading"><div><p class="eyebrow">${sub}</p><h1>${title}</h1></div><button class="primary" data-add="${add}">＋ 记一笔</button></div>`;}
+function quick(){return `<div class="quick">${M.activeTypes(state).map(t=>`<button data-add="${t.id}"><span>${icon(t.id)}</span>${t.name}</button>`).join('')}</div>`;}
+function recordList(rs){return rs.length?`<div class="records">${M.sort(rs).map(r=>{const t=M.TYPES.find(t=>t.id===r.type);return `<button class="record" data-edit="${esc(r.id)}"><span class="record-icon ${r.type}">${icon(r.type)}</span><div><div class="record-title">${esc(r.type==='weight'?'又长大一点啦':r.type==='deworm'?r.scope+'驱虫':r.type==='outing'?'出去玩啦':r.type==='illness'?'生病记录':r.type==='meal'?'好好吃饭':r.type==='food'?'换粮小记':r.category)}</div><div class="record-detail">${esc(M.describe(r))}${r.note?' · '+esc(r.note):''}</div></div><time class="record-date">${esc(r.date.slice(5).replace('-','.'))}<br>${esc(r.time||r.date.slice(0,4))}</time><span class="row-arrow">›</span></button>`;}).join('')}</div>`:'<div class="empty">这里还空着，记下今天的一件小事吧 ♡</div>';}
+function chart(s){const ws=s.weights;if(!ws.length)return '<div class="empty">还没有称重记录，先记一次吧。</div>';const lo=Math.max(0,Math.min(...ws.map(r=>r.value))-.15),hi=Math.max(...ws.map(r=>r.value))+.15;const start=new Date(ws[0].date+'T12:00:00').getTime(),end=new Date(ws.at(-1).date+'T12:00:00').getTime();const x=r=>end===start?220:42+(new Date(r.date+'T12:00:00')-start)/(end-start)*386,y=v=>155-(v-lo)/(hi-lo)*112;const path=ws.map((r,i)=>(i?'L':'M')+x(r)+' '+y(r.value)).join(' ');let out='<svg class="chart" viewBox="0 0 480 195" role="img" aria-label="体重变化曲线">';[0,1,2].forEach(i=>{const yy=43+i*56;out+=`<line x1="40" x2="447" y1="${yy}" y2="${yy}" stroke="#eadfce" stroke-dasharray="3 6"/><text x="2" y="${yy+3}">${(hi-(hi-lo)*i/2).toFixed(1)}</text>`;});out+=`<path d="${path} L${x(ws.at(-1))} 156 L${x(ws[0])} 156Z" fill="#dfedfa" opacity=".65"/><path d="${path}" fill="none" stroke="#7aafd8" stroke-width="3"/>`;ws.forEach((r,i)=>{out+=`<circle cx="${x(r)}" cy="${y(r.value)}" r="4" fill="#77a9cf" stroke="#fffaf3" stroke-width="2"><title>${r.date} · ${r.value.toFixed(2)}kg</title></circle>`;if(i===0||i===ws.length-1)out+=`<text x="${x(r)}" y="182" text-anchor="middle">${r.date.slice(5).replace('-','.')}</text>`;});return out+'</svg>';}
+function calendar(){const [year,month]=calendarMonth.split('-').map(Number),first=(new Date(year,month-1,1).getDay()+6)%7,last=new Date(year,month,0).getDate(),dates=new Set(state.records.filter(r=>r.type==='outing').map(r=>r.date));let cells=Array.from({length:first},()=>'<span class="cal-blank"></span>');for(let d=1;d<=last;d++){const date=calendarMonth+'-'+String(d).padStart(2,'0');cells.push(`<button class="cal-day ${dates.has(date)?'went-out':''} ${date===M.today()?'is-today':''}" data-day="${date}" ${date>M.today()?'disabled':''} aria-label="${date}${dates.has(date)?' 已记录外出':' 记录外出'}"><span>${d}</span>${dates.has(date)?paw:'<i></i>'}</button>`);}return `<div class="calendar"><div class="cal-title"><button data-month="-1" aria-label="上个月">‹</button><h2>${year}年 ${month}月</h2><button data-month="1" aria-label="下个月">›</button></div><div class="cal-grid">${['一','二','三','四','五','六','日'].map(d=>`<span class="cal-week">${d}</span>`).join('')}${cells.join('')}</div><p class="chart-note">蓝色小爪印，是出去玩的日子。点击日期可记录或修改。</p></div>`;}
+function photoURL(photo){const src=photo?.src||'';return src.startsWith('asset:')?assets+src.slice(6):window.MuCloud?.photoURL(src)||src;}
+function photoCarousel(){const photos=state.photos||[];albumIndex=Math.max(0,Math.min(albumIndex,photos.length-1));return `<div class="portrait"><div class="portrait-image carousel" id="hero-slider" aria-label="小μ的相册，可左右滑动">${photos.length?photos.map(p=>`<button class="photo-slide" data-album-id="${esc(p.id)}" aria-label="查看和管理照片"><img src="${esc(photoURL(p))}" alt="${esc(p.caption)}" draggable="false"/></button>`).join(''):'<button class="photo-slide photo-empty" data-album-open>＋ 添加小μ的照片</button>'}</div><span class="photo-tape"></span><span class="photo-caption">hello, little μ ♡</span><div class="photo-dots">${photos.map((p,i)=>`<button aria-label="第${i+1}张照片" data-slide="${i}" class="${i===albumIndex?'selected':''}"></button>`).join('')}</div></div>`;}
+function care(s){return `<section class="panel care-focus"><div class="section-top"><div><h2>别忘了，驱虫这件小事</h2><p class="chart-note">提前 ${state.care?.leadDays??3} 天在这里提示</p></div><button class="text-button" data-care>设置提醒 ↗</button></div><div class="care-plans">${[['internal','体内',s.lastInternal],['external','体外',s.lastExternal]].map(([key,label,last])=>{const plan=state.care?.[key],rem=s.reminders.find(r=>r.scope===label||r.scope==='内外同驱');return `<button class="care-plan ${rem?.overdue?'is-overdue':''}" data-care><span class="mini-badge ${key==='external'?'blue':''}">${label.slice(1)}</span><div><strong>${label}驱虫</strong><p>${plan?.product?esc(plan.product):'药品待补充'}</p><span class="last-care">上次 ${last?last.date.replaceAll('-','.'):'未记录'}</span></div><div class="care-next"><b>${rem?rem.nextDate.slice(5).replace('-','.'):'待设置'}</b><small>${rem?(rem.overdue?'已过 '+Math.abs(rem.daysUntil)+' 天':rem.daysUntil===0?'今天记得驱虫':'还有 '+rem.daysUntil+' 天'):'填写下次日期'}</small></div></button>`;}).join('')}</div><div class="care-actions"><button data-add="deworm" class="text-button">＋ 记录已完成驱虫</button><button id="calendar-export" class="text-button">加入手机日历 ↗</button></div><p class="chart-note">关掉页面后的提醒由手机日历负责；微信推送尚未开通。</p></section>`;}
+function render(){const key=location.hash.slice(1)||'home',active=tabs.find(t=>t[0]===key);$('#nav').innerHTML=tabs.map(t=>`<a href="#${t[0]}" class="${t[0]===key?'active':''}"><span class="nav-icon">${icon(t[0])}</span><span>${t[1]}</span></a>`).join('');$('#page-title').textContent=active?.[1]||'吃饭小本本';$('#today').textContent=M.today().replaceAll('-','.');const s=M.summary(state),p=state.profile;let html='';
+if(key==='home'){
+html=`<section class="mu-hero"><div class="hero-spots" aria-hidden="true"></div><div class="hero-copy"><span class="blue-label">小豹猫妹妹 ${paw}</span><h1>${esc(p.name)}<span>的成长日记</span></h1><p>今天也要开心长大</p><div class="hero-tags"><span>🎂 ${esc(p.birthday.replaceAll('-','.'))}</span><span>来家里 ${s.arrivalDays??'—'} 天啦 ♡</span></div><button class="text-button" data-profile>关于小μ的小档案 ↗</button></div>${photoCarousel()}<span class="hero-paw">${paw}</span></section>
+${care(s)}<div class="stats"><a class="stat" href="#food"><span class="stat-label">${icon('meal')} 今天已经喂了</span><span class="stat-value">${s.fedCount?s.fed:'—'}<small>g</small></span><span class="stat-foot">${s.fedCount?s.fedCount+' 次投喂 / 出粮':'点这里记一餐'}</span></a><button class="stat" data-profile><span class="stat-label">${paw} 来家里</span><span class="stat-value">${s.arrivalDays??'—'}<small>天啦</small></span><span class="stat-foot">${esc(p.arrival||'日期待补充')} 晚上</span></button><button class="stat" data-filter-link="weight"><span class="stat-label">${icon('weight')} 最近体重</span><span class="stat-value">${s.weight?s.weight.value.toFixed(2):'—'}<small>kg</small></span><span class="stat-foot">${s.weight?s.weight.date.slice(5).replace('-','.')+' 称重':'还没有记录'}</span></button></div>
+<section class="quick-section"><div class="section-top"><h2>今天记点什么？</h2><a href="#profile" class="text-button">管理项目</a></div>${quick()}</section>
+<div class="content-grid"><section class="panel chart-panel"><div class="section-top"><div><h2>一点点长大的证据</h2><p class="chart-note">${s.weights.length} 次称重 · 体重变化 / kg</p></div><button class="text-button" data-filter-link="weight">全部 ↗</button></div>${chart(s)}<p class="growth-note">${s.delta===null?'记下体重，留住长大的每一步。':'比上次'+(s.delta>=0?'重':'轻')+'了 '+Math.abs(s.delta*1000).toFixed(0)+' g，继续慢慢长大 ♡'}</p></section><section class="panel health-entry"><span class="health-symbol">♡</span><h2>生病时，记在这里</h2><p class="chart-note">症状、就诊、用药和恢复过程，都有地方保存。</p><button class="primary" data-add="illness">＋ 记录生病情况</button><button class="text-button" data-filter-link="illness">查看生病记录 ↗</button></section></div>
+<section class="outing-banner"><div class="outing-paw">${paw}</div><div><h2>一起出去看世界</h2><p>${s.lastOuting?'上次的小冒险是 '+s.lastOuting.date.replaceAll('-','.')+'，周'+['日','一','二','三','四','五','六'][new Date(s.lastOuting.date+'T12:00:00').getDay()]+'出去玩啦。':'下一次，会在哪里留下小脚印呢？'}</p></div><button class="primary" data-add="outing">＋ 记一次出游</button></section>
+<section class="photo-section"><div class="section-top"><h2>小μ的可爱瞬间 <span>♡</span></h2><span class="muted small">每一张都是她</span></div><div class="photo-strip">${(state.photos||[]).slice(0,3).map(p=>`<button data-album-id="${esc(p.id)}" class="moment"><img src="${esc(photoURL(p))}" alt="小μ的照片" loading="lazy"/><span>${esc(p.caption)}</span></button>`).join('')}</div></section><section class="records-section"><div class="section-top"><h2>最近的小日子</h2><a class="text-button" href="#records">翻翻记录本 ↗</a></div>${recordList(M.sort(state.records).slice(0,4))}</section>`;
+}else if(key==='records'){
+html=heading('小μ的记录本','长大的每一页，都在这里。')+`<div class="filters"><button data-filter="all" class="${filter==='all'?'active':''}">全部</button>${M.TYPES.filter(t=>M.activeTypes(state).some(a=>a.id===t.id)||state.records.some(r=>r.type===t.id)).map(t=>`<button data-filter="${t.id}" class="${filter===t.id?'active':''}">${t.name}</button>`).join('')}</div>${filter==='weight'?`<section class="panel">${chart(s)}</section>`:''}${recordList(state.records.filter(r=>filter==='all'||r.type===filter))}`;
+}else if(key==='outings'){
+html=heading('小μ的小脚印','和小μ一起，把普通日子过成小冒险。','outing')+`<section class="outing-intro"><img src="${assets}mu-play.jpg" alt="准备玩耍的小μ"/><div><span class="blue-label">OUT & ABOUT</span><h2>${s.lastOuting?'最近一次：'+s.lastOuting.date.slice(5).replace('-','.'):'下一站，去哪里？'}</h2><p>${s.lastOuting?'距今 '+s.daysSinceOuting+' 天 · 已记录 '+state.records.filter(r=>r.type==='outing').length+' 次外出':'记录出去玩的日期，也可以留下一句话。'}</p></div></section><section class="panel">${calendar()}</section><div class="section-top"><h2>去玩的小日子</h2></div>${recordList(state.records.filter(r=>r.type==='outing'))}`;
+}else if(key==='food'){
+const last=M.sort(state.records.filter(r=>r.type==='food'))[0];html=heading('吃饭小本本','好好吃饭，好好长大。','meal')+`<div class="content-grid"><section class="panel"><div class="section-top"><h2>今天的饭</h2><span class="blue-label">${M.today().slice(5).replace('-','.')}</span></div><div class="food-stats"><div><p>实际吃掉</p><strong>${s.eatenCount?s.eaten:'—'}</strong> g</div><div><p>今天已经喂了</p><strong>${s.fedCount?s.fed:'—'}</strong> g</div></div><p class="chart-note">只记份量，不记录食物品牌。出粮和实吃分开统计。</p><button class="primary" data-add="meal">＋ 记录一餐</button></section><section class="panel"><div class="section-top"><h2>换粮小记</h2><button class="text-button" data-add="food">＋ 记录</button></div>${last?`<p>${esc(M.describe(last))}</p><p class="muted">${esc(last.date)} · ${esc(last.note||'暂无适应情况备注')}</p>`:'<div class="empty">记一下新粮占比，<br>和她适应得怎么样。</div>'}<p class="chart-note">不用填写品牌和粮名。</p></section></div><section class="panel feeder"><div class="section-top"><h2>喜瓜投喂</h2><span class="blue-label">尚未连接</span></div><p class="muted">可以先手动记。自动同步仍需确认设备型号和厂商接口。</p><div class="quick inline"><button id="import-csv">导入 CSV</button><button id="template">下载模板</button></div></section><section class="records-section"><h2>吃饭与换粮记录</h2>${recordList(state.records.filter(r=>['meal','food'].includes(r.type)))}</section>`;
+}else if(key==='profile'){
+html=heading('关于小μ','一只被好好爱着的小豹猫。')+`<section class="panel profile-card"><img src="${assets}mu-avatar.jpg" alt="小μ"/><div><h2>${esc(p.name)} <span class="blue-text">♀</span></h2><p>${esc(p.breed)} · ${esc(s.age)}</p><p>生日 ${esc(p.birthday.replaceAll('-','.'))}</p></div><button class="text-button" data-profile>编辑 ↗</button></section><section class="panel family-panel"><h2>你和家人，一起记</h2><p class="chart-note">${window.MuCloud?.enabled===false?'此网页版的记录保存在当前设备。家人可以打开同一网址，但暂不共用记录。':window.MuCloud?.token?'已使用家庭共享，联网时自动同步。':'创建专属链接，发给弟弟就能打开同一本日记。'}</p><button class="primary" id="family-share" ${window.MuCloud?.enabled===false?'disabled':''}>${window.MuCloud?.enabled===false?'家庭同步尚未配置':window.MuCloud?.token?'复制家庭链接':'创建免登录家庭链接'}</button><p class="chart-note">${window.MuCloud?.enabled===false?'需要另外配置共享服务后，才能和家人一起修改同一本日记。':'拿到专属链接的家人都能查看、添加和修改，无需注册登录。'}</p><span class="tag">${esc(syncLabel)}</span></section><section class="panel"><div class="section-top"><h2>想记哪些小事？</h2></div><p class="chart-note">关掉不需要的项目，首页和新增入口就会收起来。已有记录仍保留，可单独删除。</p><div class="type-toggles">${M.TYPES.map(t=>{const on=M.activeTypes(state).some(x=>x.id===t.id);return `<button class="type-toggle ${on?'on':''}" data-toggle-type="${t.id}" role="switch" aria-checked="${on}" aria-label="${t.name}记录"><span>${icon(t.id)} ${t.name}</span><i></i></button>`;}).join('')}</div></section><section class="panel"><h2>把小日子好好保存</h2><div class="settings-row"><div><h3>完整备份</h3><p>保存在当前设备，记得定期导出。</p></div><button class="secondary" id="export">导出备份</button></div><div class="settings-row"><div><h3>恢复备份</h3><p>选择之前导出的 JSON 文件。</p></div><button class="secondary" id="restore">恢复</button></div>${state.trash?.length?`<div class="settings-row"><div><h3>最近删除</h3><p>${state.trash.length} 条记录可恢复。</p></div><button class="secondary" id="undo-delete">恢复上一条</button></div>`:''}</section><p class="chart-note">喜瓜 · 尚未连接自动同步。驱虫下次日期只在打开时提示。</p>`;
+}
+$('#content').innerHTML=(loadError?`<div class="note overdue">${esc(loadError)} <button id="raw-export">导出原始备份</button></div>`:'')+html+`<p class="footer-note">${paw} 小μ的成长日记 · 每一个小日子都算数<br>${esc(syncLabel)} · ${state.records.length} 条记录</p>`;
+}
+function field(name,label,value='',type='text',hint=''){return `<label class="field">${label}<input name="${name}" type="${type}" value="${esc(value)}" ${type==='number'?'step="any" min="0"':''} ${type==='date'&&!['nextDate','internalNextDate','externalNextDate'].includes(name)?'max="'+M.today()+'"':''}><small>${hint}</small></label>`;}
+function select(name,label,options,value){return `<label class="field">${label}<select name="${name}">${options.map(o=>{const k=Array.isArray(o)?o[0]:o,v=Array.isArray(o)?o[1]:o;return `<option value="${esc(k)}" ${k===value?'selected':''}>${esc(v)}</option>`;}).join('')}</select></label>`;}
+function recordFields(type,r){let fields=select('type','记录类型',M.TYPES.filter(t=>M.activeTypes(state).some(a=>a.id===t.id)||type===t.id).map(t=>[t.id,t.name]),type)+`<div class="field-row">${field('date','日期',r.date||M.today(),'date')}${field('time','时间（可选）',r.time||'','time')}</div>`;
+if(type==='weight')fields+=field('value','体重 / kg',r.value??'','number','请填写实际称量值。');
+if(type==='meal')fields+=select('mealKind','这笔数据是什么', [['fed','手动投喂'],['dispensed','投喂器出粮'],['eaten','实际吃掉']],r.mealKind||'fed')+field('value','重量 / g',r.value??'','number')+select('foodType','食物类型',['干粮','湿粮','零食','其他'],r.foodType||'干粮');
+if(type==='deworm')fields+=select('scope','驱虫范围',['内外同驱','体内','体外'],r.scope||'内外同驱')+field('product','药品名称（可选）',r.product||'')+field('dose','已用规格／剂量（可选）',r.dose||'','text','只记录实际用量，不提供剂量计算。')+field('nextDate','下次日期（可选）',r.nextDate||'','date','依据具体药品说明或兽医建议填写。');
+if(type==='illness')fields+=field('symptoms','观察到的症状',r.symptoms||'')+select('status','目前情况',['观察中','已就诊','已康复'],r.status||'观察中')+field('treatment','就诊／用药（可选）',r.treatment||'');
+if(type==='food')fields+=field('ratio','本次新粮占比 / %',r.ratio??'','number');
+if(type==='outing')fields+=field('place','去了哪里（可选）',r.place||'')+field('duration','玩了多久 / 分钟（可选）',r.duration??'','number');
+if(type==='health')fields+=select('category','健康事项',['疫苗','就诊','用药','绝育','发情','体检','其他'],r.category||'疫苗')+field('title','名称／事项',r.title||'')+field('nextDate','下次日期（可选）',r.nextDate||'','date');
+if(type==='daily')fields+=select('category','日常事项',['便便','呕吐','食欲','外出','洗护','零食试吃','其他'],r.category||'便便')+field('title','简短描述',r.title||'');
+return fields+`<label class="field">备注<textarea name="note">${esc(r.note||'')}</textarea></label>`;}
+function openEditor(type='',id){if(!type&&!id&&!M.activeTypes(state).length){toast('先在档案里启用想记录的项目吧');return;}mode='record';editing=id?state.records.find(r=>r.id===id):null;const r=editing||{};$('#editor-title').textContent=editing?'编辑记录':'记一笔';$('#form-fields').innerHTML=recordFields(r.type||type||M.activeTypes(state)[0]?.id||'weight',r);$('#form-error').textContent='';$('#delete-record').hidden=!editing;$('#editor').showModal();}
+function openProfile(){mode='profile';editing=null;const p=state.profile;$('#editor-title').textContent='小μ的档案';$('#form-fields').innerHTML=field('name','名字',p.name)+field('birthday','生日',p.birthday,'date')+field('arrival','到家日期',p.arrival||'','date')+field('breed','品种',p.breed)+select('sex','性别',['母','公'],p.sex)+field('feeder','投喂 App／设备型号',p.feeder)+`<div class="note">生日已按你提供的记录填写，月龄会自动更新。</div>`;$('#form-error').textContent='';$('#delete-record').hidden=true;$('#editor').showModal();}
+function confirmation(title,html,action){$('#confirm-title').textContent=title;$('#confirm-body').innerHTML=html;pending=action;$('#confirm').showModal();}
+function download(name,contents,type='application/json'){const u=URL.createObjectURL(new Blob([contents],{type}));const a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
+$('#record-form').addEventListener('submit',e=>{e.preventDefault();const data=Object.fromEntries(new FormData(e.target));try{const next=mode==='care'?M.setCare(state,{internal:{product:data.internalProduct,nextDate:data.internalNextDate},external:{product:data.externalProduct,nextDate:data.externalNextDate},leadDays:data.leadDays}):mode==='profile'?M.profile(state,data):M.save(state,{...data,...(editing?{id:editing.id,source:editing.source}:{})});if(!commit(next))return;$('#editor').close();render();toast('已经记好了');}catch(err){$('#form-error').textContent=err.message;}});
+$('#form-fields').addEventListener('change',e=>{if(e.target.name==='type'){const r=Object.fromEntries(new FormData($('#record-form')));$('#form-fields').innerHTML=recordFields(e.target.value,{date:r.date,time:r.time,note:r.note});$('#form-error').textContent='';}});
+$('#delete-record').onclick=()=>{if(!editing)return;const id=editing.id;confirmation('删除这条记录？','从记录本移除，之后可在档案里恢复。',()=>{if(commit(M.remove(state,id))){$('#editor').close();render();toast('记录已删除');}});};
+$('#close-editor').onclick=()=>$('#editor').close();$('#close-confirm').onclick=()=>$('#confirm').close();$('#confirm-action').onclick=()=>{const action=pending;pending=null;$('#confirm').close();if(action)action();};$('#mobile-add').onclick=()=>openEditor(location.hash==='#food'?'meal':location.hash==='#outings'?'outing':M.activeTypes(state)[0]?.id||'weight');$('#backup-short').onclick=()=>download('小μ备份-'+M.today()+'.json',JSON.stringify(state,null,2));
+document.addEventListener('click',e=>{const extra=e.target.closest('[data-toggle-type],[data-filter-link],[data-day],[data-month],[data-photo]');if(extra){if(extra.hasAttribute('data-toggle-type')){if(commit(M.toggleType(state,extra.dataset.toggleType)))render();}else if(extra.hasAttribute('data-filter-link')){filter=extra.dataset.filterLink;location.hash='records';render();}else if(extra.hasAttribute('data-day')){const r=state.records.find(r=>r.type==='outing'&&r.date===extra.dataset.day);openEditor('outing',r?.id);if(!r)$('#record-form [name=date]').value=extra.dataset.day;}else if(extra.hasAttribute('data-month')){const [y,m]=calendarMonth.split('-').map(Number),d=new Date(y,m-1+Number(extra.dataset.month),1);calendarMonth=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');render();}else{confirmation('小μ的可爱瞬间',`<img class="lightbox" src="${assets+esc(extra.dataset.photo)}" alt="小μ的照片"/>`,()=>{});}return;}const a=e.target.closest('[data-add],[data-profile],[data-edit],[data-filter]');if(a){if(a.hasAttribute('data-add'))openEditor(a.dataset.add);else if(a.hasAttribute('data-profile'))openProfile();else if(a.hasAttribute('data-edit'))openEditor(null,a.dataset.edit);else {filter=a.dataset.filter;render();}return;}switch(e.target.id){case'undo-delete':if(commit(M.undo(state))){render();toast('已经放回记录本');}break;case'export':download('小μ备份-'+M.today()+'.json',JSON.stringify(state,null,2));break;case'raw-export':download('小μ原始备份.json',localStorage.getItem(KEY)||'');break;case'restore':$('#backup-file').click();break;case'import-csv':$('#csv-file').click();break;case'template':download('喂食导入模板.csv','\uFEFFdate,time,grams,kind\n'+M.today()+',08:00,10,dispensed\n','text/csv;charset=utf-8');break;}});
+$('#backup-file').onchange=async e=>{const file=e.target.files[0];e.target.value='';if(!file)return;try{if(file.size>5e6)throw new Error('备份文件超过5MB');const next=M.restore(await file.text());confirmation('恢复这份备份？',`将用 ${esc(next.profile.name)} 的 <b>${next.records.length}</b> 条记录替换当前 <b>${state.records.length}</b> 条记录。请先确认已备份当前数据。`,()=>{if(commit(next)){render();toast('备份已恢复');}});}catch(err){toast('无法恢复：'+err.message);}};
+$('#csv-file').onchange=async e=>{const file=e.target.files[0];e.target.value='';if(!file)return;try{if(file.size>1e6)throw new Error('CSV超过1MB');const text=await file.text(),rs=M.parseCSV(text),result=M.importMeals(state,text);confirmation('确认导入喂食记录',`共 ${rs.length} 条，将新增 ${result.added} 条；其余为重复记录。<table class="preview-table">${rs.slice(0,5).map(r=>`<tr><td>${esc(r.date)} ${esc(r.time)}</td><td>${esc(M.describe(r))}</td></tr>`).join('')}</table>`,()=>{if(commit(M.importMeals(state,text).state)){render();toast('导入完成');}});}catch(err){toast('导入失败：'+err.message);}};
+window.addEventListener('hashchange',render);render();
+window.MuCloud?.start(next=>{state=M.migrate(M.restore(next));KEY=window.MuCloud.storageKey;localStorage.setItem(KEY,JSON.stringify(state));render();if($('#album-editor').open)renderAlbum();},status=>{syncLabel=status;const label=$('#sync-status');if(label)label.textContent=status;});
+function openCare(){mode='care';editing=null;const c=state.care||M.defaultCare();$('#editor-title').textContent='设置驱虫提醒';$('#form-fields').innerHTML=field('internalProduct','内驱药',c.internal.product)+field('internalNextDate','下次内驱日期',c.internal.nextDate,'date')+field('externalProduct','外驱药',c.external.product)+field('externalNextDate','下次外驱日期',c.external.nextDate,'date')+field('leadDays','提前几天提示',c.leadDays,'number')+'<p class="note">日期按包装或兽医建议填写。幼猫片1颗是你提供的历史资料，下次用量请按现体重重新核对。</p>';$('#form-error').textContent='';$('#delete-record').hidden=true;$('#editor').showModal();}
+function renderAlbum(){const ps=state.photos||[];albumIndex=Math.max(0,Math.min(albumIndex,ps.length-1));const p=ps[albumIndex];$('#album-content').innerHTML=(p?`<div class="album-view"><img src="${esc(photoURL(p))}" alt="小μ的照片"/><button data-album-step="-1" aria-label="上一张照片">‹</button><button data-album-step="1" aria-label="下一张照片">›</button></div><p>${albumIndex+1} / ${ps.length}</p>`:'<p>相册还空着，添加一张照片吧。</p>')+`<div class="album-actions"><button class="primary" data-upload-photo>＋ 上传照片</button>${p?`<button class="danger" data-delete-photo="${esc(p.id)}">删除这张</button>`:''}${state.photoTrash?.length?'<button data-undo-photo>恢复上一张</button>':''}</div>`;}
+function openAlbum(id){albumIndex=Math.max(0,(state.photos||[]).findIndex(p=>p.id===id));renderAlbum();$('#album-editor').showModal();}
+async function compressPhoto(file){if(!['image/jpeg','image/png','image/webp'].includes(file.type))throw Error('请选择JPG、PNG或WebP');if(file.size>20000000)throw Error('照片请小于20MB');const image=new Image(),url=URL.createObjectURL(file);try{await new Promise((ok,fail)=>{image.onload=ok;image.onerror=()=>fail(Error('照片无法读取'));image.src=url;});const c=document.createElement('canvas'),scale=Math.min(1,1000/Math.max(image.naturalWidth,image.naturalHeight));c.width=Math.round(image.naturalWidth*scale);c.height=Math.round(image.naturalHeight*scale);c.getContext('2d').drawImage(image,0,0,c.width,c.height);return c.toDataURL('image/jpeg',.7);}finally{URL.revokeObjectURL(url);}}
+async function uploadPhotos(files){try{if((state.photos||[]).length+files.length>40)throw Error('最多保存40张照片');toast('正在整理照片…');const photos=[];for(const file of files){const src=await compressPhoto(file);photos.push(window.MuCloud?.token?await window.MuCloud.upload(await(await fetch(src)).blob()):{id:'photo-'+crypto.randomUUID(),src,caption:'小μ的可爱瞬间'});}if(commit(M.addPhotos(state,photos))){albumIndex=state.photos.length-1;render();renderAlbum();toast('照片已保存');}}catch(e){toast(e.message);}}
+async function familyShare(){try{const url=await window.MuCloud.share(state);KEY=window.MuCloud.storageKey;localStorage.setItem(KEY,JSON.stringify(state));render();confirmation('发给家人，一起记',`<p>拿到链接就能查看和编辑，无需注册登录。</p><input class="share-link" readonly value="${esc(url)}" aria-label="家庭共享链接">`,async()=>{try{await navigator.clipboard.writeText(url);toast('家庭链接已复制');}catch{toast('请选中链接手动复制');}});$('#confirm-action').textContent='复制链接';}catch(e){toast(e.message||'共享服务暂不可用');}}
+function exportCalendar(){const rs=M.summary(state).reminders.filter(r=>r.nextDate>=M.today());if(!rs.length){toast('请先设置未来的下次日期');openCare();return;}const lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Mu Diary//Care//ZH','CALSCALE:GREGORIAN'];for(const r of rs){const d=r.nextDate.replaceAll('-','');lines.push('BEGIN:VEVENT','UID:mu-'+r.scope+'-'+d+'@mu-diary','DTSTAMP:'+new Date().toISOString().replace(/[-:]|\.\d{3}/g,''),'DTSTART:'+d+'T010000Z','DTEND:'+d+'T013000Z','SUMMARY:小μ'+r.scope+'驱虫提醒','BEGIN:VALARM','TRIGGER:-P'+(state.care?.leadDays??3)+'D','ACTION:DISPLAY','DESCRIPTION:小μ的驱虫日快到了','END:VALARM','BEGIN:VALARM','TRIGGER:PT0M','ACTION:DISPLAY','DESCRIPTION:今天记得给小μ驱虫','END:VALARM','END:VEVENT');}lines.push('END:VCALENDAR');download('小μ驱虫提醒.ics',lines.join('\r\n')+'\r\n','text/calendar;charset=utf-8');}
+$('#close-album').onclick=()=>$('#album-editor').close();$('#photo-upload').onchange=e=>{const fs=[...e.target.files];e.target.value='';if(fs.length)void uploadPhotos(fs);};
+document.addEventListener('click',e=>{const el=e.target.closest('[data-care],[data-album-id],[data-album-open],[data-slide],[data-album-step],[data-upload-photo],[data-delete-photo],[data-undo-photo]');if(el){if(el.hasAttribute('data-care'))openCare();else if(el.hasAttribute('data-album-id'))openAlbum(el.dataset.albumId);else if(el.hasAttribute('data-album-open'))openAlbum();else if(el.hasAttribute('data-slide')){albumIndex=+el.dataset.slide;$('#hero-slider').scrollTo({left:albumIndex*$('#hero-slider').clientWidth,behavior:'smooth'});}else if(el.hasAttribute('data-album-step')){albumIndex=(albumIndex+(+el.dataset.albumStep)+state.photos.length)%state.photos.length;renderAlbum();}else if(el.hasAttribute('data-upload-photo'))$('#photo-upload').click();else if(el.hasAttribute('data-delete-photo')){if(commit(M.removePhoto(state,el.dataset.deletePhoto))){render();renderAlbum();}}else if(el.hasAttribute('data-undo-photo')){if(commit(M.undoPhoto(state))){render();renderAlbum();}}return;}if(e.target.id==='family-share')void familyShare();if(e.target.id==='calendar-export')exportCalendar();});
+document.addEventListener('scroll',e=>{if(e.target.id==='hero-slider'){albumIndex=Math.round(e.target.scrollLeft/e.target.clientWidth);document.querySelectorAll('[data-slide]').forEach((d,i)=>d.classList.toggle('selected',i===albumIndex));}},true);
+</script></body></html>
